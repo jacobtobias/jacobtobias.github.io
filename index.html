@@ -7,27 +7,85 @@
   <style>
     body {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       height: 100vh;
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      background: radial-gradient(circle, #FFDF00, #FFD700, #FFC700, #FFB700);
+      background-size: 200% 200%;
+      animation: discoBall 5s ease infinite;
       text-align: center;
+      position: relative;
+    }
+    @keyframes discoBall {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .square-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1) 76%, transparent 77%, transparent),
+        linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, #ccc 0%, #ccc 1px, transparent 1px, transparent),
+        linear-gradient(0deg, #ccc 0%, #ccc 1px, transparent 1px, transparent);
+      background-size: 50px 50px;
+      pointer-events: none;
+    }
+    nav {
+      width: 80%;
+      max-width: 600px;
+      background-color: #333;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      z-index: 1;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
     }
     .centered-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 20px;
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.9);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
+      z-index: 1;
     }
     .centered-container div {
       margin: 10px 0;
       font-size: 24px;
       font-weight: bold;
+    }
+    .centered-container p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 10px 0;
+      max-width: 600px;
     }
     audio {
       margin: 20px 0;
@@ -35,13 +93,24 @@
   </style>
 </head>
 <body>
+  <div class="square-pattern"></div>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
   <div class="centered-container">
-    <div>DJ GOLDEY</div>
-    <audio controls>
-      <source src="set_1.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div>@awgoldstein</div>
+    <div id="about">DJ GOLDEY</div>
+    <p>DJ Goldey is an eclectic and cool DJ hailing from Midcoast Maine. Known for their funky, fun, and party vibes, DJ Goldey brings a unique energy to every event. Whether it's spinning the latest hits or digging deep into the crates for classic tracks, their sets are always a journey through sound that keeps the dance floor moving and grooving.</p>
+    <div id="music">
+      <audio controls>
+        <source src="set_1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div id="contact">@awgoldstein</div>
   </div>
 </body>
 </html>
