@@ -55,11 +55,15 @@
     nav ul li a:hover {
       text-decoration: underline;
     }
-    .centered-container {
+    audio {
+      margin: 20px 0;
+    }
+    
+    #about-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px;
+      margin-top: 80px; /* Adjust this value based on the height of the navigation bar */
       background-color: rgba(255, 255, 255, 0.9);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
@@ -67,19 +71,31 @@
       width: 100%; /* Ensuring container takes full width */
       max-width: 600px;
     }
-    .centered-container div {
-      margin: 10px 0;
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .centered-container p {
-      font-size: 18px;
-      line-height: 1.5;
-      margin: 10px 0;
+
+    #mixes-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px; /* Add space between sections */
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      z-index: 1;
+      width: 100%; /* Ensuring container takes full width */
       max-width: 600px;
     }
-    audio {
-      margin: 20px 0;
+
+    #contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px; /* Add space between sections */
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      z-index: 1;
+      width: 100%; /* Ensuring container takes full width */
+      max-width: 600px;
     }
   </style>
 </head>
@@ -92,37 +108,43 @@
     </ul>
   </nav>
   <div class="centered-container">
-    <div id="about">DJ GOLDEY</div>
-    <p>DJ Goldey is an eclectic and cool DJ hailing from Midcoast Maine. Known for their funky, fun, and party vibes, DJ Goldey brings a unique energy to every event. Whether it's spinning the latest hits or digging deep into the crates for classic tracks, their sets are always a journey through sound that keeps the dance floor moving and grooving.</p>
-    <div id="mixes">
-      <div class="audio-group">
-        <div class="group-title">Techno</div>
-        <audio controls>
-          <source src="set_1.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-        <audio controls>
-          <source src="baby don't hurt me to my love 2 .mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="audio-group">
-        <div class="group-title">Chill House</div>
-        <audio controls>
-          <source src="dance part 1 _ mas que to vogue practice day of.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-        <audio controls>
-          <source src="Dance party 2 up down dress code to makeba .mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-        <audio controls>
-          <source src="dance party 3 long prac on my mind to lizzo.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
+    <div id="about-container">
+      <div id="about">DJ GOLDEY</div>
+      <p>DJ Goldey is an eclectic and cool DJ hailing from Midcoast Maine. Known for their funky, fun, and party vibes, DJ Goldey brings a unique energy to every event. Whether it's spinning the latest hits or digging deep into the crates for classic tracks, their sets are always a journey through sound that keeps the dance floor moving and grooving.</p>
+    </div>
+    <div id="mixes-container">
+      <div id="mixes">
+        <div class="audio-group">
+          <div class="group-title">Techno</div>
+          <audio controls>
+            <source src="set_1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <audio controls>
+            <source src="baby don't hurt me to my love 2 .mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="audio-group">
+          <div class="group-title">Chill House</div>
+          <audio controls>
+            <source src="dance part 1 _ mas que to vogue practice day of.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <audio controls>
+            <source src="Dance party 2 up down dress code to makeba .mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <audio controls>
+            <source src="dance party 3 long prac on my mind to lizzo.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
       </div>
     </div>
-    <div id="contact">@awgoldstein</div>
+    <div id="contact-container">
+      <div id="contact">@awgoldstein</div>
+    </div>
   </div>
 </body>
 </html>
