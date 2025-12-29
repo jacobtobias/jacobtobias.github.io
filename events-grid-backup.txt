@@ -1,0 +1,91 @@
+================================================================================
+EVENTS GRID SECTION - BACKUP CODE
+================================================================================
+
+This file contains the complete HTML and CSS for the Events section with
+flyer images in a responsive grid layout.
+
+To restore: Copy the HTML section into index.html where desired, and copy
+the CSS into assets/css/main.css at the end of the file.
+
+================================================================================
+HTML CODE (insert into index.html)
+================================================================================
+
+<!-- Events Grid -->
+	<section id="events" class="scroll-section">
+		<h2>events</h2>
+		<div class="events-grid">
+			<div class="event-item"><img src="images/1 24 25 Strand Pecha Kucha.jpeg" alt="Event 1/24/25"></div>
+			<div class="event-item"><img src="images/1 19 25 us over it waldoboro inn.JPG" alt="Event 1/19/25"></div>
+			<div class="event-item"><img src="images/12 5 25 aids fundraiser luce.jpg" alt="Event 12/5/25"></div>
+			<div class="event-item"><img src="images/12 31 24 new years perry house.PNG" alt="Event 12/31/24"></div>
+			<div class="event-item"><img src="images/10 11 25 electric midcoast.jpg" alt="Event 10/11/25"></div>
+			<div class="event-item"><img src="images/10 25 24 Luce stingy jack .jpeg" alt="Event 10/25/24"></div>
+			<div class="event-item"><img src="images/8 9 25 club moss party.jpeg" alt="Event 8/9/25"></div>
+			<div class="event-item"><img src="images/7 4 24 vinalhaven july 4.jpeg" alt="Event 7/4/24"></div>
+			<div class="event-item"><img src="images/6 28 25 nyaf grey maine.jpeg" alt="Event 6/28/25"></div>
+			<div class="event-item"><img src="images/3 23 24 luce dance party.JPG" alt="Event 3/23/24"></div>
+			<div class="event-item"><img src="images/12 30 23 Drops on the Clock - Sat Dec 30th.JPG" alt="Event 12/30/23"></div>
+		</div>
+	</section>
+
+================================================================================
+CSS CODE (append to assets/css/main.css)
+================================================================================
+
+/* Scroll Margin for Sections */
+
+	.scroll-section {
+		scroll-margin-top: 120px;
+	}
+
+/* Events Grid */
+
+	.events-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.5em;
+		margin-top: 2em;
+	}
+
+	.event-item {
+		overflow: hidden;
+		border-radius: 4px;
+	}
+
+		.event-item img {
+			width: 100%;
+			height: auto;
+			display: block;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.event-item:hover img {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+		}
+
+	@media screen and (max-width: 980px) {
+		.events-grid {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1em;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		.events-grid {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0.75em;
+		}
+	}
+
+================================================================================
+FEATURES:
+- 11 event flyer images sorted by date (newest first)
+- 4 columns on desktop, 3 columns on mobile
+- Hover effect: images lift up and show shadow
+- Smooth transitions
+- Responsive gaps adjust by screen size
+- scroll-margin-top prevents nav overlap when using anchor links
+================================================================================

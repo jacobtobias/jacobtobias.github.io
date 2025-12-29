@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>DJ GOLDEY - Events</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Border -->
+		<div class="page-border"></div>
+
+		<!-- Nameplate -->
+		<div class="nameplate">
+			<h1>DJ GOLDEY</h1>
+		</div>
+
+		<!-- Hero Section -->
+		<section class="hero-section">
+			<div class="hero-image"></div>
+
+			<!-- Main Navigation -->
+			<nav class="main-nav">
+				<a href="index.html#events">Events</a>
+				<a href="index.html#music">Music</a>
+				<a href="index.html#about">About</a>
+				<a href="index.html#services">Services</a>
+				<a href="index.html#rental">Rentals</a>
+				<a href="index.html#contact">Contact</a>
+			</nav>
+		</section>
+
+		<!-- Hamburger Menu (for mobile fallback) -->
+		<div class="hamburger-menu">
+			<button class="hamburger" id="hamburger-btn" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<nav class="menu-content" id="menu-content">
+				<a href="index.html#events" class="menu-item">Events</a>
+				<a href="index.html#music" class="menu-item">Music</a>
+				<a href="index.html#about" class="menu-item">About</a>
+				<a href="index.html#services" class="menu-item">Services</a>
+				<a href="index.html#rental" class="menu-item">Rentals</a>
+				<a href="index.html#contact" class="menu-item">Contact</a>
+			</nav>
+		</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Events Section -->
+					<section id="events">
+						<header class="major">
+							<h2>Upcoming Events</h2>
+						</header>
+						<p>Check back soon for upcoming events and performances!</p>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://www.instagram.com/aly.goldey/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				// Hamburger menu toggle
+				document.getElementById('hamburger-btn').addEventListener('click', function() {
+					this.classList.toggle('active');
+					document.getElementById('menu-content').classList.toggle('active');
+				});
+
+				// Close menu when clicking a menu item
+				document.querySelectorAll('.menu-item').forEach(item => {
+					item.addEventListener('click', function() {
+						document.getElementById('hamburger-btn').classList.remove('active');
+						document.getElementById('menu-content').classList.remove('active');
+					});
+				});
+
+				// Close menu when clicking outside
+				document.addEventListener('click', function(event) {
+					const hamburgerMenu = document.querySelector('.hamburger-menu');
+					if (!hamburgerMenu.contains(event.target)) {
+						document.getElementById('hamburger-btn').classList.remove('active');
+						document.getElementById('menu-content').classList.remove('active');
+					}
+				});
+			</script>
+
+	</body>
+</html>
